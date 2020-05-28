@@ -10,7 +10,9 @@
   bottom=4cm,left=3cm,right=4cm 
 }
 \usepackage{fancyhdr}
+\usepackage{soul}
 \usepackage{url}
+\usepackage{xcolor}
 
 
 
@@ -65,20 +67,100 @@
 %                      Editorial 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The purpose of this editorial note is to update the SIGCOMM community on the reviewing process in place currently at CCR, and our plans to evolve it to make CCR a more open and friendly venue to authors, adding more value to the community.
+The purpose of this editorial note is to update the SIGCOMM community on the
+reviewing process in place currently at CCR, and our plans to evolve it to
+make CCR a more open and friendly venue to authors, adding more value to
+the community.
 
+\hl{RH: I wonder if we should briefly outline what's to come}
 
 \section{Role of editorial board and turn-around time}
 
-At the moment, once a paper is submitted on the CCR hotcrp review system, the CCR editor assigns the paper to an area chair (based on the area chair expertise but also trying to balance the reviewing load across all area chairs), and the area chair in turn selects the reviewers. Typically, three reviewers are invited for each paper, and a decision is made within about 10 weeks from the reviewer assignment\footnote{Note that we also plan to speed up the turnaround time for returning decisions, especially when the decision is a reject. This is already done for out-of-scope submissions through a fast-track reject by the editor (\textbf{should we allow area editors as well to do it?}).}. The decision is either made solely by the area chair (when the outcome is clear-cut based on the reviews), or through a collegial involvement of the reviewers and/or the CCR editor (e.g., often for "revise and resubmit to next issue" decisions). Three types of decisions are currently employed: accept, reject, and "revise and resubmit to the next issue". In the case of an acceptance and rejection, a summary letter is drafted by the area chair, and posted on the hotcrp system as a comment to the submission. The case "revise and resubmit to the next issue" is more involved, as in this case the authors have to be able to submit their revisions within a limited time (typically for the next issue hence less than 3 months after the decision). From now on, we plan to empower area chairs to be solely responsible for making decisions, though still collegially with the reviewers, but without the involvement of the CCR editor as much as possible. As will be explained in the next section, the more open communication channel between area chair, reviewers, and authors, should make this easier in the future.
+\hl{This section seems to have at least two purposes: introduce the new
+communication channels, and then empowering the ACs. I wonder if we should
+describe the role of the board first, then the suggested communication
+channels, and move the rest to a new section called `Faster turn-arounds:
+empowering area chairs'}
+
+\subsection{Role of the board}
+
+
+At the moment, once a paper is submitted on the CCR hotcrp review system,
+the CCR editor assigns the paper to an area chair (based on the area
+chair's expertise but also trying to balance the reviewing load across all
+area chairs), and the area chair in turn selects the reviewers. Typically,
+three reviewers are invited for each paper, and a decision is made within
+about 10 weeks from the reviewer assignment\footnote{Note that we also plan
+to speed up the turn-around time for returning decisions, especially when
+the decision is a reject. This is already done for out-of-scope submissions
+through a fast-track reject by the editor (\textbf{should we allow area
+editors as well to do it?}).}. The decision is either made solely by the
+area chair (when the outcome is clear-cut based on the reviews), or through
+a collegial involvement of the reviewers and/or the CCR editor (e.g., often
+for ``revise and resubmit to next issue'' decisions). Three types of
+decisions are currently employed: accept, reject, and ``revise and resubmit
+to the next issue''. \hl{I always thought these decisions are odd. From
+experience, even an Accept still means considerable work to work in
+reviewer requests. It is not necessarily the light touch requested by a
+Minor Revision. Note that journals also distinguish between Major Revision
+and Revise-and-resubmit. I realise it has to do with the review concluding
+and a decision for inclusion in the next issues being needed asap.} In the
+case of an acceptance and rejection, a summary letter is drafted by the
+area chair, and posted on the hotcrp system as a comment to the submission.
+The case ``revise and resubmit to the next issue'' is more involved, as in
+this case the authors have to be able to submit their revisions within a
+limited time (typically for the next issue, hence less than 3 months after
+the decision) \hl{What is actually the use of that?}. From now on, we plan
+to empower area chairs to be solely responsible for making decisions,
+though still collegially with the reviewers, but without the involvement of
+the CCR editor as much as possible. As will be explained in the next
+section, the more open communication channels between area chair,
+reviewers, and authors, should make this easier in the future.
+
+\subsection{Communication channels}
+\hl{Here, we could write about how we envisage the communication to take place.}
+
 
 \section{Reviewer anonymity: breaking the anonymity wall}
 
-Even though currently the review form already includes a tick box to allow reviewers to make their name visible to authors, it is not yet widespread practice for reviewers to tick it. From now on, the default expectation is that reviewers invited to evaluate a CCR submission will have to be non-anonymous to authors, unless they invoke a very special reason (what such reasons could be?). We hope that by doing this, the whole reviewing process will be more open, and enable direct communication (still through the hotcrp reviewing platform of CCR) between authors and reviewers, for example to clarify misunderstandings regarding the paper, for example to let authors better explain what they believe the contribution of their paper is, which might not have been understood by the reviewer. Once more, the next section will elaborate on how changing the reviewing form may support this.
+\hl{Probably so important that we want a section of its own. It is worded a bit into-your-face at the moment, though. Can SIGCOMM members take that? :) Importantly, I would give examples of strong, well-known journals that do employ open peer review. We could also announce the beginning of a trialling period where ACs only ask all reviewers to be visible. We should definitely give positive examples of courteous process and better papers as a result.}
+
+Even though currently the review form already includes a tick box to allow
+reviewers to make their name visible to authors, it is not yet widespread
+practice for reviewers to tick it. From now on, the default expectation is
+that reviewers invited to evaluate a CCR submission will have to be
+non-anonymous to authors, unless they invoke a very special reason (what
+such reasons could be?). We hope that by doing this, the whole reviewing
+process will be more open, and enable direct communication (still through
+the hotcrp reviewing platform of CCR) between authors and reviewers, for
+example to clarify misunderstandings regarding the paper, for example to
+let authors better explain what they believe the contribution of their
+paper is, which might not have been understood by the reviewer. Once more,
+the next section will elaborate on how changing the reviewing form may
+support this.
 
 \section{Paper evaluation: adding value to the community}
 
-Currently, the CCR review form uses novelty and how well written the paper is as metrics upon which a decision is made whether to accept a paper or not. We have now changed the review form to also include a numerical score for value to the research community and reproducibility, which will be taken into account into the review process to make decisions. Despite how important technical novelty is for paper acceptance, we believe that the SIGCOMM community generally places too much emphasis on it. This leads to a paper selection process biased against very important contributions that add potentially even more value to the community than technically novel contributions. CCR already accepts a variety of contributions, such as the editorial notes, reproducible papers, and recently educational contributions. We believe that opening up to different types of contributions was already a huge step forward. However, unless we explicitly allow reviewers to identify and positively score the value a submission provides to the community, the process is still not as open as it could be towards contributions whose contribution does not clearly fall within the pre-defined types CCR currently accepts.
+\hl{I agree, although I would probably portray this as allowing a more balanced
+way to appreciate contributions. It does represent a departure of CCR's
+original mission of fast dissemination of new result towards a wider scope.}
+
+Currently, the CCR review form uses novelty and how well written the paper is
+as metrics upon which a decision is made whether to accept a paper or not. We
+have now changed the review form to also include a numerical score for value to
+the research community and reproducibility, which will be taken into account
+into the review process to make decisions. Despite how important technical
+novelty is for paper acceptance, we believe that the SIGCOMM community
+generally places too much emphasis on it. This leads to a paper selection
+process biased against very important contributions that add potentially even
+more value to the community than technically novel contributions. CCR already
+accepts a variety of contributions, such as the editorial notes, reproducible
+papers, and recently educational contributions. We believe that opening up to
+different types of contributions was already a huge step forward. However,
+unless we explicitly allow reviewers to identify and positively score the value
+a submission provides to the community, the process is still not as open as it
+could be towards contributions whose contribution does not clearly fall within
+the pre-defined types CCR currently accepts.
 
 
 %                      description of papers
