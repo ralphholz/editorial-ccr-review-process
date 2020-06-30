@@ -1,187 +1,220 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Title: Editorial
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[sigconf]{acmart}
 
-\documentclass[letterpaper]{article}
-\usepackage{background}
-\usepackage{geometry}
-\geometry{
-  letterpaper,top=3cm,
-  bottom=4cm,left=3cm,right=4cm 
-}
+% Disable / remove copyright boxes
+\setcopyright{none}
+\settopmatter{printacmref=false}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+
+% Increase margin between text and footer
+\setlength{\footskip}{20pt}
+
+% Add CCR footer
 \usepackage{fancyhdr}
-\usepackage{soul}
-\usepackage{url}
-\usepackage{xcolor}
-
-
-
-\SetBgAngle{0}
-\SetBgColor{black}
-\SetBgContents{\rule[0.6ex]{.5pt}{\paperheight}}
-\SetBgPosition{current page.west}
-\SetBgHshift{+2cm}
-
-\newcommand{\etal}{\textit{et al}. }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                      YOUR INFORMATION
-%
-%      PLEASE EDIT THE FOLLOWING LINES ACCORDINGLY!!
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\review}{Update on ACM SIGCOMM CCR reviewing process: making the review process more open}
-\newcommand{\authors}{CCR Editorial board} 
-%\newcommand{\reviewer}{Steve Uhlig}
-%\newcommand{\revieweraff}{CCR Editor}
-\newcommand{\issue}{3}
-\newcommand{\volume}{50}
-\newcommand{\pubmonth}{July}
-\newcommand{\pubyear}{2020}
-
-
 \fancypagestyle{plain}{%
-   \fancyhf{} %ls
-   \fancyfoot[L]{\vspace{1cm} ACM SIGCOMM Computer Communication Review }%
-   \fancyfoot[R]{\vspace{1cm} Volume \volume{ }Issue \issue,
-     \pubmonth{ }\pubyear}%
+    \fancyhf{} %
+    \fancyfoot[L]{ACM SIGCOMM Computer Communication Review}%
+    \fancyfoot[R]{Volume 50 Issue 3, July 2020}%
 }
-%\renewcommand{\headrulewidth}{0.4pt}% Default \headrulewidth is 0.4pt 
-%\renewcommand{\footrulewidth}{0.4pt}% Default \footrulewidth is 0pt 
-
 \pagestyle{plain}
-\def\refname{}
 
+% Add CCR footer on first page
+\fancypagestyle{firstpagestyle}{%
+    \fancyhf{} %
+    \fancyfoot[L]{ACM SIGCOMM Computer Communication Review}%
+    \fancyfoot[R]{Volume 50 Issue 3, January 2020}%
+}
 
-\usepackage{multicol}
-\setlength{\columnsep}{1cm}
- 
+% Add editorial note
+\begin{teaserfigure}
+    \parbox{\textwidth}{\centering\normalsize
+        This article is an editorial note submitted to CCR. It has NOT been peer-reviewed.\\
+        The authors take full responsibility for this article's
+        technical content. Comments can be posted through CCR Online.
+    }
+    \vspace{10pt}
+\end{teaserfigure}
+
+\usepackage{balance}
+
 \begin{document}
-\begin{multicols}{2}
-[
-%\begin{center}{ {\normalfont\sffamily\Large\bfseries {Public Review for}}} \end{center}
-\begin{center}{ \normalfont\sffamily\LARGE\bfseries{\review}}\end{center}
-\begin{center}{\normalfont\sffamily\large {\authors}}\end{center}
-]
-\renewcommand{\sfdefault}{ptm}
+    
+    \title{Update on ACM SIGCOMM CCR reviewing process:\\ towards a more open review process}
+        
+    \author{Ralph Holz}
+    \affiliation{
+        \institution{University of Twente, The Netherlands}
+    }
+    \email{r.holz@utwente.nl}
+    
+    \author{Marco Mellia}
+    \affiliation{
+        \institution{Polytechnico di Torino, Italy}
+    }
+    \email{mellia@polito.it}
+    
+    \author{Olivier Bonaventure}
+    \affiliation{
+        \institution{Université catholique de Louvain, Belgium}
+    }
+    \email{Olivier.Bonaventure@uclouvain.be}
+    
+    \author{Hamed Haddadi}
+    \affiliation{
+        \institution{Imperial College, UK}
+    }
+    \email{h.haddadi@imperial.ac.uk}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                      Editorial 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \author{Matthew Caesar}
+\affiliation{
+    \institution{UIUC, USA}
+}
+\email{caesar@illinois.edu}
 
-The purpose of this editorial note is to update the SIGCOMM community on the
-reviewing process in place currently at CCR, and our plans to evolve it to
-make CCR a more open and friendly venue to authors, adding more value to
-the community.
+    \author{Sergey Gorinsky}
+\affiliation{
+    \institution{IMDEA, Spain}
+}
+\email{sergey.gorinsky@imdea.org}
 
-\hl{RH: I wonder if we should briefly outline what's to come}
+    \author{Gianni Antichi}
+\affiliation{
+    \institution{Queen Mary University of London, UK}
+}
+\email{g.antichi@qmul.ac.uk}
+
+    \author{Joseph Camp}
+\affiliation{
+    \institution{SMU, USA}
+}
+\email{camp@smu.edu}
+
+    \author{kc Klaffy}
+\affiliation{
+    \institution{CAIDA, USA}
+}
+\email{kc@caida.org}
+
+
+    \author{Bhaskaran Raman}
+\affiliation{
+    \institution{IIT Bombay, India}
+}
+\email{br@cse.iitb.ac.in}
+
+    \author{Anna Sperotto}
+\affiliation{
+    \institution{University of Twente, The Netherlands}
+}
+\email{a.sperotto@utwente.nl}
+
+
+    \author{Aline Viana}
+\affiliation{
+    \institution{INRIA, France}
+}
+\email{aline.viana@inria.fr}
+
+    \author{Steve Uhlig}
+\affiliation{
+    \institution{Queen Mary University of London, UK}
+}
+\email{steve.uhlig@qmul.ac.uk}
+        
+    
+    \begin{abstract}
+        
+This editorial note aims to first inform the SIGCOMM community on the reviewing process in place currently at CCR, and 
+second, share our plans to make CCR a more open and welcoming venue, adding more value to the SIGCOMM community.
+    \end{abstract}
+    
+    \begin{CCSXML}
+	<ccs2012>
+	<concept>
+	<concept_id>10002944.10011123.10011675</concept_id>
+	<concept_desc>General and reference~Validation</concept_desc>
+	<concept_significance>500</concept_significance>
+	</concept>
+	</ccs2012>
+\end{CCSXML}
+
+        
+    \ccsdesc[500]{General and reference~Validation}
+    
+    \keywords{Editorial}
+    
+    \maketitle
+
+    \section{Contents}\label{sec:content}
+
+Section~\ref{sec:board-time} describes the role of the editorial board, the type of papers CCR accepts, and the way decisions are made. We also discuss how authors interact with reviewers, and our plans to improve on this interaction in the future. Section~\ref{sec:anonymity} follows to introduce the first central aspect we want to change in the reviewing process: reviewer anonymity.  Section~\ref{sec:value} concludes with a second necessary change aiming at widening the scope of the contributions considered, by adding a new metric to the review process, called "value to the community".
 
 \section{Role of editorial board and turn-around time}
+\label{sec:board-time}
+    
+This section describes the role of the editorial board and the current process used to handle papers. Then, we explain the changes we will make to the review process to improve turn-around time as well as to have more open communication between authors and reviewers.
 
-\hl{This section seems to have at least two purposes: introduce the new
-communication channels, and then empowering the ACs. I wonder if we should
-describe the role of the board first, then the suggested communication
-channels, and move the rest to a new section called `Faster turn-arounds:
-empowering area chairs'}
+ \subsection{Role of the editorial board}
+\label{subsec:board}
 
-\subsection{Role of the board}
+CCR publishes four issues each year: January, April, July and October.
+At the moment, once a paper is submitted on the CCR hotcrp review system, the CCR editor sends the list of papers submitted to the next issue to area chairs for them to bid which papers they would like to handle. After the bidding process, the selected area chairs invite reviewers for their papers. Typically,  there are three reviewers for each paper, and a decision is made within about ten weeks from the reviewer assignment. The final decision can be either made solely by the area chair when there is a clear outcome based on the reviews, or may involve reviewers and the CCR editor (e.g., often for "revise and resubmit to the next issue" decisions). 
 
+\paragraph{Decisions}
+Three types of decisions are currently employed: "accept", "reject", and "revise and resubmit to the next issue". These three options enable fast decisions to a quarterly publication.
 
-At the moment, once a paper is submitted on the CCR hotcrp review system,
-the CCR editor assigns the paper to an area chair (based on the area
-chair's expertise but also trying to balance the reviewing load across all
-area chairs), and the area chair in turn selects the reviewers. Typically,
-three reviewers are invited for each paper, and a decision is made within
-about 10 weeks from the reviewer assignment\footnote{Note that we also plan
-to speed up the turn-around time for returning decisions, especially when
-the decision is a reject. This is already done for out-of-scope submissions
-through a fast-track reject by the editor (\textbf{should we allow area
-editors as well to do it?}).}. The decision is either made solely by the
-area chair (when the outcome is clear-cut based on the reviews), or through
-a collegial involvement of the reviewers and/or the CCR editor (e.g., often
-for ``revise and resubmit to next issue'' decisions). Three types of
-decisions are currently employed: accept, reject, and ``revise and resubmit
-to the next issue''. \hl{I always thought these decisions are odd. From
-experience, even an Accept still means considerable work to work in
-reviewer requests. It is not necessarily the light touch requested by a
-Minor Revision. Note that journals also distinguish between Major Revision
-and Revise-and-resubmit. I realise it has to do with the review concluding
-and a decision for inclusion in the next issues being needed asap.} In the
-case of an acceptance and rejection, a summary letter is drafted by the
-area chair, and posted on the hotcrp system as a comment to the submission.
-The case ``revise and resubmit to the next issue'' is more involved, as in
-this case the authors have to be able to submit their revisions within a
-limited time (typically for the next issue, hence less than 3 months after
-the decision) \hl{What is actually the use of that?}. From now on, we plan
-to empower area chairs to be solely responsible for making decisions,
-though still collegially with the reviewers, but without the involvement of
-the CCR editor as much as possible. As will be explained in the next
-section, the more open communication channels between area chair,
-reviewers, and authors, should make this easier in the future.
+In the case of acceptance or rejection, the area chair posts a summary letter on the hotcrp system as a comment to the submission. The case "revise and resubmit to the next issue" requires the authors to submit their revisions within a limited time (typically for the next issue, around two months after the decision), to keep the turn-around time-limited while allowing for corrections.
 
-\subsection{Communication channels}
-\hl{Here, we could write about how we envisage the communication to take place.}
+\subsection{Empowering area chairs}
+\label{subsec:area-chairs}
 
+One of the changes proposed is to give area chairs the power to do "fast-track rejects" to speed up the turn-around time for returning decisions. Note that this is already done by the editor for clearly out-of-scope submissions. Also, from now on, it is the sole responsibility of the area chairs to decide on a paper. 
 
-\section{Reviewer anonymity: breaking the anonymity wall}
+The goal of these changes is to empower area chairs, who, based on the advice of the reviewers, and when necessary with the help of the editor, will make decisions that they believe are best for CCR, and the SIGCOMM community.
 
-\hl{Probably so important that we want a section of its own. It is worded a bit into-your-face at the moment, though. Can SIGCOMM members take that? :) Importantly, I would give examples of strong, well-known journals that do employ open peer review. We could also announce the beginning of a trialling period where ACs only ask all reviewers to be visible. We should definitely give positive examples of courteous process and better papers as a result.}
+\subsection{More open communication between authors and reviewers}
+\label{subsec:comm}
 
-Even though currently the review form already includes a tick box to allow
-reviewers to make their name visible to authors, it is not yet widespread
-practice for reviewers to tick it. From now on, the default expectation is
-that reviewers invited to evaluate a CCR submission will have to be
-non-anonymous to authors, unless they invoke a very special reason (what
-such reasons could be?). We hope that by doing this, the whole reviewing
-process will be more open, and enable direct communication (still through
-the hotcrp reviewing platform of CCR) between authors and reviewers, for
-example to clarify misunderstandings regarding the paper, for example to
-let authors better explain what they believe the contribution of their
-paper is, which might not have been understood by the reviewer. Once more,
-the next section will elaborate on how changing the reviewing form may
-support this.
+Currently, the main communication channel used between reviewers and authors is through the reviews and the decision letter (comment) from the area chair. The comments reflecting the discussion among reviewers and area chair that led to the decision are not visible to authors. The authors have limited means to discuss with reviewers, e.g., through a rebuttal or a revision plan. Note also that both the rebuttal and a revision plan are only offered to authors in specific cases. Therefore, the review process is opaque to authors, sometimes leading to frustration if the reviews were perceived as unfair or suffering from some form of bias, e.g., too much emphasis on novelty. 
 
-\section{Paper evaluation: adding value to the community}
+We plan to improve the transparency of this review process.  Our plan, however, is to selectively make comments visible to authors, inviting them to respond, before a final decision has been made on a submission.  Using comments more extensively between authors and reviewers as a communication channel may help them clarify misunderstandings regarding paper's contribution, or discuss technical details that might be not clear enough. 
 
-\hl{I agree, although I would probably portray this as allowing a more balanced
-way to appreciate contributions. It does represent a departure of CCR's
-original mission of fast dissemination of new result towards a wider scope.}
+\section{Review transparency}
+\label{sec:anonymity}
 
-Currently, the CCR review form uses novelty and how well written the paper is
-as metrics upon which a decision is made whether to accept a paper or not. We
-have now changed the review form to also include a numerical score for value to
-the research community and reproducibility, which will be taken into account
-into the review process to make decisions. Despite how important technical
-novelty is for paper acceptance, we believe that the SIGCOMM community
-generally places too much emphasis on it. This leads to a paper selection
-process biased against very important contributions that add potentially even
-more value to the community than technically novel contributions. CCR already
-accepts a variety of contributions, such as the editorial notes, reproducible
-papers, and recently educational contributions. We believe that opening up to
-different types of contributions was already a huge step forward. However,
-unless we explicitly allow reviewers to identify and positively score the value
-a submission provides to the community, the process is still not as open as it
-could be towards contributions whose contribution does not clearly fall within
-the pre-defined types CCR currently accepts.
+Currently, the review form already includes a tick box allowing reviewers to make their name visible to authors. However, it is not yet a widespread practice for reviewers to tick it. We envision a reviewing model where it becomes standard practice for reviewers to make themselves known.
 
+Such models do exist; for instance, BMJ Open runs an open peer-review process. BMJ Open\footnote{See \url{https://bmjopen.bmj.com/pages/reviewerguidelines/}.} requires reviewers to (1) sign reviews with their name, position and institution, (2) declare any competing interests, and (3) reviews are published online alongside the authors' original versions and replies to the reviewers' comments if the article is published.
 
-%                      description of papers
+We understand that encouraging reviewers to make their identity known may feel risky, e.g., due to possible retaliation. Therefore, we do not plan to require reviewers to drop their anonymity unless they prefer to do so. However, following the example of BMJ Open,  we will ask area chairs to share their public reviews together with the original reviews submitted by the reviewers, which may include the reviewer name if they waived their anonymity.
 
+We hope that by doing this, the reviewing process will be more transparent for the entire community, as well as create a virtuous circle among reviewers by encouraging high-quality reviews.
 
+\section{Paper evaluation: beyond novelty, value to the community}
+\label{sec:value}
 
-%I hope that you will enjoy reading this new issue and welcome 
-%comments and suggestions on CCR Online (\url{https://ccronline.sigcomm.org})
-%or by email at \texttt{ccr-editor}\emph{ at }\texttt{sigcomm.org}. 
+Currently, the CCR review form focuses on novelty to decide on technical
+papers. The reason for this is historical, grounded in the original purpose of CCR as a platform for fast dissemination of new ideas and, early but promising results in our community. With the widening of the type of contributions that are considered at CCR (namely technical papers, editorial notes, reproducible papers, and educational contributions), the focus on novelty is not appropriate any more. 
 
+With the educational track introduced in 2020, as well as the reproducibility track that encourages sharing artefacts, CCR needs to account for this broader scope. To this end, the review form now includes a numerical score for "value to the research community", which will be taken into account into the review process to make decisions.
 
+Emphasising technical novelty in paper acceptance, indeed makes SIGCOMM publications selective and prestigious. However, such emphasis may also lead to ignoring valuable contributions to the community. CCR, therefore, already made a huge step forward by welcoming different types of contributions. Nevertheless, we still need to explicitly allow reviewers to identify and positively score the value of different kinds of submissions. The new "value to the research community" will hopefully serve this purpose.
 
-\vspace{1cm}
-\hfill
-\begin{minipage}{.7\columnwidth}
-\begin{flushright}                                      
-%\emph{Public review written by}\\
-%\textbf{\reviewer}\\
-%\emph{\revieweraff}\\
-\end{flushright} 
-\end{minipage}
-
-\end{multicols}
+Please send feedback, comments and questions to the editor at \url{ccr-editor@sigcomm.org}, or post your comments online on \url{https://ccronline.sigcomm.org/}.       
+    
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
