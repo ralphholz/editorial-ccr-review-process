@@ -30,10 +30,12 @@ force:
 	-pdflatex="$(LATEX) $(LATEXOPT) %O %S" $(MAIN)
 
 clean:
+	cp $(MAIN).pdf $(MAIN).bak
 	$(LATEXMK) -C $(MAIN)
 	rm -f $(MAIN).pdfsync
 	rm -rf *~ *.tmp
 	rm -f *.bbl *.blg *.aux *.end *.fls *.log *.out *.fdb_latexmk
+	mv $(MAIN).bak $(MAIN).pdf
 
 once:
 	$(LATEXMK) $(LATEXMKOPT) -pdflatex="$(LATEX) $(LATEXOPT) %O %S" $(MAIN)
